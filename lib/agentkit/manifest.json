@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "product": "pipmcp",
+  "credential": "PIPMCP_API_KEY",
+  "skills": [
+    {
+      "name": "pipmcp-google-sheets",
+      "description": "Connect AI agents to Google Sheets using one PipMCP API key and actual hosted tool discovery."
+    }
+  ],
+  "files": {
+    "skills/pipmcp-google-sheets/SKILL.md": "53678004287ff5398f812612ac155e8a3bf9941736de30488872fcc4d44c5478"
+  }
+}
