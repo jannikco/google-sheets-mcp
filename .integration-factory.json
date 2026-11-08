@@ -12,7 +12,7 @@
   "maintainer": "jannikco",
   "license": "MIT",
   "attributionSlug": "github-google-sheets-mcp",
-  "sourceRevision": "ab813987d80dcab872a42a2bcb1825f4302b2b4c6b40050c75842fbe091fb586",
+  "sourceRevision": "bcf9a85dcfc4711554c6ee41ec923c6a9357d381656cbee4cf88cadfd261f540",
   "qualityVersion": 2,
   "artifactType": "connector",
   "evidence": [
@@ -32,7 +32,7 @@
   "appName": "Google Sheets",
   "connectorId": "google-sheets",
   "executionAuthority": "pipmcp-gateway",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "agentReady": true,
   "capabilityEvidence": {
     "local": {

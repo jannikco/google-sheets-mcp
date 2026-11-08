@@ -1,0 +1,52 @@
+{
+  "id": "budget-exception-review",
+  "repositoryId": "google-sheets-mcp",
+  "product": "pipmcp",
+  "connectorId": "google-sheets",
+  "title": "Find spreadsheet budget exceptions",
+  "promise": "Compare budget and actual figures in a reviewable exception report.",
+  "sourceRevision": "bcf9a85dcfc4711554c6ee41ec923c6a9357d381656cbee4cf88cadfd261f540",
+  "credential": "PIPMCP_API_KEY",
+  "transport": "pipmcp-gateway",
+  "sourceRefs": [
+    "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get"
+  ],
+  "readTask": {
+    "intent": "Compare budget and actual figures in a reviewable exception report.",
+    "requiredCapability": "Read-only authorized account data; discover actual names and schemas first"
+  },
+  "synthetic": {
+    "strategy": "score",
+    "field": "variancePercent",
+    "value": 10,
+    "records": [
+      {
+        "id": "synthetic-budget-a",
+        "budget": 1000,
+        "actual": 1240
+      },
+      {
+        "id": "synthetic-budget-b",
+        "budget": 1000,
+        "actual": 1030
+      }
+    ],
+    "input": {
+      "limit": 10
+    },
+    "normalization": "Invented normalized review fields demonstrate task logic; live provider schemas and field mappings must be reviewed separately.",
+    "expectedReviewCount": 1,
+    "asOf": "2026-11-08T00:00:00Z",
+    "normalize": {
+      "type": "budget-variance"
+    }
+  },
+  "livePolicy": {
+    "default": "preflight-only",
+    "explicitReadSelectionRequired": true,
+    "providerWritesAllowed": false,
+    "sandboxWritesRequireSeparateApproval": true
+  },
+  "baseSourceRevision": "ab813987d80dcab872a42a2bcb1825f4302b2b4c6b40050c75842fbe091fb586",
+  "releaseVersion": "1.1.0"
+}
